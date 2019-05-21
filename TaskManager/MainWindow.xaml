@@ -1,0 +1,43 @@
+﻿<Window x:Name="TASK" x:Class="TaskManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskManager"
+        mc:Ignorable="d"
+        Title="TASK" Height="105" Width="293.445" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="#BF000000" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded" MouseDown="Window_MouseDown" Closed="Window_Closed" MouseWheel="TASK_MouseWheel">
+    <Grid x:Name="grid_Main" Margin="0,0,0.6,0" ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="1000">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="grid_Tasks" Margin="0,30,0,0" VerticalAlignment="Top" Height="364" Grid.RowSpan="2">
+            <Grid x:Name="grid_Task_Exmaple" Margin="0" VerticalAlignment="Top" Height="75">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="229*"/>
+                    <ColumnDefinition Width="59*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btn_Setting" Content="?" Grid.Column="1" Margin="0.2,0,-0.2,0" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="24" Foreground="White" Click="btn_Setting_Click" Style="{StaticResource BUTTON}"/>
+                <Label x:Name="lab_Date" Content="Day:" Foreground="White" VerticalAlignment="Top" Style="{StaticResource LABLE}"/>
+                <Label x:Name="lab_TaskName"  Margin="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="White" MouseDoubleClick="lab_TaskName_MouseDoubleClick" Style="{StaticResource LABLE}"/>
+
+            </Grid>
+        </Grid>
+        <Grid x:Name="grid_Title" Margin="0" Background="Black">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btn_Close" Content="X" Grid.Column="2" Margin="30,0,-0.2,0.4" Background="{x:Null}" FontSize="14" FontWeight="Bold" Foreground="Red" Click="btn_Close_Click" Grid.ColumnSpan="2" BorderBrush="Gray" Style="{StaticResource BUTTON}" HorizontalAlignment="Left" Width="31"/>
+            <Button x:Name="btn_MiniSize" Content="-" Grid.Column="2" Margin="0,0,29.8,0.4" Background="{x:Null}" FontSize="22" FontWeight="Bold" Foreground="White" Click="btn_MiniSize_Click" Grid.ColumnSpan="2" BorderBrush="Gray" Style="{StaticResource BUTTON}" />
+            <Label x:Name="lab_Title" Content="Data" Height="30" Width="176" Foreground="White" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" MouseDown="lab_Title_MouseDown"/>
+            <Button x:Name="btn_Mode_Setting" Content="" Margin="0" FontSize="10" FontWeight="Bold" Foreground="White" BorderBrush="Gray" Grid.Column="1" RenderTransformOrigin="-0.11,0.2" Click="btn_Mode_Setting_Click" Style="{StaticResource BUTTON}">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

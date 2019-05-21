@@ -1,0 +1,208 @@
+﻿<Window
+    x:Class="TaskManager.Setting"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:TaskManager"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="TASK"
+    Width="439.786"
+    Height="304.756"
+    AllowsTransparency="True"
+    Background="#BF000000"
+    MouseLeftButtonDown="Window_MouseLeftButtonDown"
+    ScrollViewer.VerticalScrollBarVisibility="Disabled"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid
+        x:Name="grid_Main"
+        Margin="0,0,0,-0.2"
+        ScrollViewer.HorizontalScrollBarVisibility="Auto">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid x:Name="grid_Title" Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="30" />
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="btn_Close"
+                Grid.Column="2"
+                Margin="1,0,0.4,0.4"
+                Background="#4C000000"
+                BorderBrush="{x:Null}"
+                Click="btn_Close_Click"
+                Content="X"
+                FontSize="14"
+                FontWeight="Bold"
+                Foreground="Red"
+                Style="{StaticResource BUTTON}">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type ButtonBase}">
+                        <Border
+                            x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            SnapsToDevicePixels="True">
+                            <ContentPresenter
+                                x:Name="contentPresenter"
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}"
+                                ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                Focusable="False"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Label
+                x:Name="lab_Title"
+                Width="176"
+                Height="30"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Setting"
+                FontSize="18"
+                FontWeight="Bold"
+                Foreground="White" />
+        </Grid>
+        <Grid
+            x:Name="grid_Settings"
+            Grid.RowSpan="2"
+            Margin="0,30,0,-0.2"
+            Background="#00000000">
+            <Button
+                x:Name="btn_Confirm"
+                Grid.Row="1"
+                Width="65"
+                Height="27"
+                Margin="0,0,87,10.2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Background="{x:Null}"
+                BorderBrush="White"
+                Click="btn_Confirm_Click"
+                Content="Confirm"
+                Foreground="White"
+                Style="{StaticResource BUTTON}" />
+            <Button
+                x:Name="btn_Cannel"
+                Grid.Row="1"
+                Width="64"
+                Height="27"
+                Margin="0,0,10,10.2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Background="{x:Null}"
+                BorderBrush="White"
+                Click="btn_Cannel_Click"
+                Content="Cannel"
+                Foreground="White"
+                Style="{StaticResource BUTTON}" />
+            <Label
+                x:Name="lab_SourcePath"
+                Width="74"
+                Height="26"
+                Margin="10,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="ExcelPath:"
+                Foreground="White"
+                Style="{StaticResource LABLE}" />
+            <TextBox
+                x:Name="txt_SourcePath"
+                Width="319"
+                Height="19"
+                Margin="84,12,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="{x:Null}"
+                BorderBrush="White"
+                Foreground="White"
+                TextChanged="txt_SourcePath_TextChanged"
+                TextWrapping="Wrap" />
+            <Button
+                x:Name="btn_Open"
+                Width="22"
+                Height="21"
+                Margin="0,0,10,244"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                BorderBrush="White"
+                Click="btn_Open_Click"
+                Content=""
+                Foreground="White"
+                Style="{StaticResource BUTTON}">
+                <Button.Background>
+                    <ImageBrush />
+                </Button.Background>
+            </Button>
+            <TextBox
+                x:Name="txt_Sheet"
+                Width="319"
+                Height="19"
+                Margin="84,45,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="{x:Null}"
+                BorderBrush="White"
+                Foreground="White"
+                TextChanged="txt_Sheet_TextChanged"
+                TextWrapping="Wrap" />
+            <Label
+                x:Name="lab_Sheet"
+                Width="74"
+                Height="26"
+                Margin="10,41,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Sheet:"
+                Foreground="White"
+                Style="{StaticResource LABLE}" />
+            <Label
+                x:Name="lab_Load_Hisrtory"
+                Width="92"
+                Height="26"
+                Margin="10,72,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Load History:"
+                Foreground="White"
+                Style="{StaticResource LABLE}" />
+            <Button
+                x:Name="btn_isLoadHistory"
+                Width="22"
+                Height="21"
+                Margin="0,0,10,182"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                BorderBrush="White"
+                Click="Btn_isLoadHistory_Click"
+                Content=""
+                Foreground="White"
+                Style="{StaticResource BUTTON}">
+                <Button.Background>
+                    <ImageBrush />
+                </Button.Background>
+            </Button>
+            <Button
+                x:Name="btn_ClearHistory"
+                Height="28"
+                Margin="10,0,10,149"
+                VerticalAlignment="Bottom"
+                BorderBrush="#FFFF0606"
+                Click="Btn_ClearHistory_Click"
+                Content="Clear History Data"
+                FontWeight="Bold"
+                Foreground="Red"
+                Style="{StaticResource BUTTON}" />
+        </Grid>
+    </Grid>
+</Window>
