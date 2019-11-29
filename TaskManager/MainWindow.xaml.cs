@@ -77,10 +77,10 @@ namespace TaskManager
             this.notifyIcon = new System.Windows.Forms.NotifyIcon();
             ToolBarIcon_init();
             Process[] arrayProcess = Process.GetProcessesByName("TaskManager");
-            if (arrayProcess.Count()>1)
+            if (arrayProcess.Count() > 2)
             {
                 MessageBox.Show("程序已经再运行！");
-                this.Close();
+                //this.Close();
             }
 
         }
@@ -151,7 +151,14 @@ namespace TaskManager
 
             DataTable data = null;
 
-            data = ExcelToDataTable(setting.SourcePath, setting.ChoosenSheet);
+            try
+            {
+                data = ExcelToDataTable(setting.SourcePath, setting.ChoosenSheet);
+            }
+            catch
+            {
+                return;
+            }
             //XML
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load("Data.xml");
@@ -225,6 +232,8 @@ namespace TaskManager
             }
             xmlDoc.Save("Data.xml");
 
+            sortTaskList(list_Tasks);
+            
             //UI
             foreach (TaskInformation t in list_Tasks)
             {
@@ -233,7 +242,33 @@ namespace TaskManager
             AddLastTaskRow();
         }
 
-        public static DataTable ExcelToDataTable(string strExcelFileName, string strSheetName)
+        private void sortTaskList(List<TaskInformation> list_Tasks)
+        {
+            list_Tasks.Sort((left,right) => 
+            {
+                if(left.Name.StartsWith("星期") && left.Name.Length == 3)
+                {
+                    return 1;
+                }
+                else if(right.Name.StartsWith("星期") && left.Name.Length == 3)
+                {
+                    return -1;
+                }
+
+                int left_val = -1, right_val = -1;
+                if(left.Name.Contains("-") && left.Name.Split('-').Last().IsNum())
+                {
+                    left_val = int.Parse(left.Name.Split('-').Last());
+                }
+                if (right.Name.Contains("-") && right.Name.Split('-').Last().IsNum())
+                {
+                    right_val = int.Parse(right.Name.Split('-').Last());
+                }
+                return left_val - right_val;
+            }) ;
+        }
+
+        public static DataTable ExcelToDataTable(string strExcelFileName, string strSheetName = "Sheet1")
         {
             string strConn = "";
             //源的定义  
@@ -473,7 +508,6 @@ namespace TaskManager
         private void Window_Closed(object sender, EventArgs e)
         {
             setting.Close();
-
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load("Data.xml");
             XmlNode root = xmlDoc.SelectSingleNode("Datas");

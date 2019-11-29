@@ -54,9 +54,6 @@ F:\C# Projects\TaskManager-Excel版\TaskManager\obj\Debug\TaskAdd.baml
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Debug\TaskManager.exe.config
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Debug\TaskManager.exe
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Debug\TaskManager.pdb
-F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Debug\MySql.Data.dll
-F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Debug\MySql.Data.Entity.EF6.dll
-F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Debug\MySql.Web.dll
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Debug\MySql.Data.xml
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Debug\MySql.Data.Entity.EF6.xml
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Debug\MySql.Web.xml
@@ -76,7 +73,6 @@ F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Debug\TaskSetting.b
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Debug\TaskManager.g.resources
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Debug\TaskManager.Properties.Resources.resources
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Debug\TaskManager.csproj.GenerateResource.cache
-F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Debug\TaskManager.csproj.CoreCompileInputs.cache
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Debug\TaskManager.csproj.CopyComplete
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Debug\TaskManager.exe
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Debug\TaskManager.pdb

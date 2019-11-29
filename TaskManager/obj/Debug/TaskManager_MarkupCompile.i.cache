@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\C# Projects\TaskManager-Excel版\TaskManager\obj\Debug\
+F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Debug\
 TaskManager
 none
 false
 DEBUG;TRACE
-F:\C# Projects\TaskManager-Excel版\TaskManager\App.xaml
+F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\App.xaml
 5-503965486
 
-15-831733419
-20251183396
+13-1546676834
+18-2100755106
 ControlStyles.xaml;MainWindow.xaml;Setting.xaml;TaskAdd.xaml;TaskSetting.xaml;
 
-False
+True
 

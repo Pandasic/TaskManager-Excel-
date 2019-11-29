@@ -81,6 +81,7 @@
     <Compile Include="TaskAdd.xaml.cs">
       <DependentUpon>TaskAdd.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TaskDataAdapter.cs" />
     <Compile Include="TaskInformation.cs" />
     <Compile Include="TaskSetting.xaml.cs">
       <DependentUpon>TaskSetting.xaml</DependentUpon>
@@ -143,12 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Texture\png_Setting.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="TaskSetting.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Data.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
