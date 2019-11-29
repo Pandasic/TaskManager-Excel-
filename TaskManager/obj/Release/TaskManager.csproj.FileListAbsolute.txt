@@ -1,9 +1,6 @@
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Release\TaskManager.exe.config
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Release\TaskManager.exe
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Release\TaskManager.pdb
-F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Release\MySql.Data.dll
-F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Release\MySql.Data.Entity.EF6.dll
-F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Release\MySql.Web.dll
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Release\MySql.Data.xml
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Release\MySql.Data.Entity.EF6.xml
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\bin\Release\MySql.Web.xml
@@ -24,7 +21,6 @@ F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Release\TaskSetting
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Release\TaskManager.g.resources
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Release\TaskManager.Properties.Resources.resources
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Release\TaskManager.csproj.GenerateResource.cache
-F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Release\TaskManager.csproj.CoreCompileInputs.cache
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Release\TaskManager.csproj.CopyComplete
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Release\TaskManager.exe
 F:\Projects\C# Projects\TaskManager-Excel版\TaskManager\obj\Release\TaskManager.pdb

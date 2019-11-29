@@ -17,7 +17,7 @@
                 <ColumnDefinition Width="30"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="btn_Close" Content="X" Grid.Column="2" Margin="0.8,0,0.6,0.4" Background="#4C000000" FontSize="14" FontWeight="Bold" Foreground="Red" Click="btn_Close_Click" BorderBrush="{x:Null}" Style="{StaticResource BUTTON}"/>
-            <Label x:Name="lab_Title" Content="Setting" Height="30" Width="176" Foreground="White" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label x:Name="lab_Title" Content="Setting" Height="30" Width="176" Foreground="White" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" MouseDoubleClick="lab_Title_MouseDoubleClick"/>
         </Grid>
         <Grid x:Name="grid_Settings" Grid.Row="1" Background="#00000000">
             <Label x:Name="lab_Name" Content="Name" Height="31" Width="74" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,4.6,0,0" Grid.Row="1" Style="{StaticResource LABLE}"/>

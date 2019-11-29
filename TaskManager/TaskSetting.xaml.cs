@@ -14,6 +14,9 @@ using System.Windows.Shapes;
 using System.Xml;
 using System.IO;
 using Microsoft.Win32;
+using System.Text.RegularExpressions;
+using System.Collections;
+using System.Diagnostics;
 
 namespace TaskManager
 {
@@ -34,6 +37,8 @@ namespace TaskManager
             InitializeComponent();
             Expend.LoadImage(btn_Open, @"Texture\pic_File.png");
 
+            this.Title = string.Format("{0} - TaskSettings",Task.Name);
+
             xmlDoc.Load("TaskSetting.xml");
             XmlNode root = xmlDoc.FirstChild;
 
@@ -49,8 +54,9 @@ namespace TaskManager
             }
             if (ele == null)//如果不在XML表
             {
+                
                 ele = xmlDoc.CreateElement("SETTING");
-                ele.SetAttribute("Name", Task.Name);
+                ele.SetAttribute("Name",Task.Name);
                 ele.SetAttribute("AimSource", "");
                 root.AppendChild(ele);
             }
@@ -112,5 +118,18 @@ namespace TaskManager
         {
             this.Close();
         }
+
+        private void lab_Title_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                Process p = Process.Start("TaskSetting.xml");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+    
     }
 }

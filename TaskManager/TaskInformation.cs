@@ -11,5 +11,6 @@ namespace TaskManager
         public string Name;
         public string Time { get; set; }
         public  bool IsFinish { get; set; }
+
     }
 }

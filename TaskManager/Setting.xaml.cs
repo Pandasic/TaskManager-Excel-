@@ -14,6 +14,8 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.IO;
 
+using TaskManager.Adapter;
+
 namespace TaskManager
 {
     /// <summary>
@@ -23,6 +25,8 @@ namespace TaskManager
     {
         public bool isNeedToUpdate=false;
         private string gSourcePath="";
+        private AppSettingsAdapter settingsAdapter;
+
         public string SourcePath
         {
             get
@@ -86,6 +90,7 @@ namespace TaskManager
         {
             InitializeComponent();
             Expend.LoadImage(btn_Open, @"Texture\pic_File.png");
+            settingsAdapter = new AppSettingsAdapter();
             //INI
             if (!File.Exists("Setting.ini") || !File.Exists(INIHelper.ContentValue("ALL", "ExcelPath", ProgramPath + "Setting.ini")))
             {
@@ -113,16 +118,16 @@ namespace TaskManager
 
         private void LoadFromINI()
         {
-            SourcePath = INIHelper.ContentValue("ALL", "ExcelPath", ProgramPath + "Setting.ini");
-            ChoosenSheet = INIHelper.ContentValue("ALL", "Sheet", ProgramPath + "Setting.ini");
-            isLoadHistory = INIHelper.ContentValue("ALL", "IsLoadHistory", ProgramPath + "Setting.ini") == "True";
+            SourcePath = this.settingsAdapter.ExcelPath;
+            ChoosenSheet = this.settingsAdapter.Sheet;
+            isLoadHistory = this.settingsAdapter.isLoadHistory;
         }
 
         private void btn_Confirm_Click(object sender, RoutedEventArgs e)
         {
-            INIHelper.WritePrivateProfileString("ALL", "ExcelPath", SourcePath, ProgramPath + "Setting.ini");
-            INIHelper.WritePrivateProfileString("ALL", "Sheet", ChoosenSheet, ProgramPath + "Setting.ini");
-            INIHelper.WritePrivateProfileString("ALL", "IsLoadHistory", isLoadHistory.ToString(), ProgramPath + "Setting.ini");
+            this.settingsAdapter.ExcelPath = SourcePath;
+            this.settingsAdapter.Sheet = ChoosenSheet ;
+            this.settingsAdapter.isLoadHistory = isLoadHistory;
             this.Hide();
         }
 
